@@ -26,13 +26,13 @@ CREATE TABLE "Title" (
      )
 );
 
-CREATE TABLE "Salery" (
+CREATE TABLE "Salary" (
     "salary_id" serial   NOT NULL,
     "emp_no" integer   NOT NULL,
     "salary" float   NOT NULL,
     "from_date" date   NOT NULL,
     "to_date" date   NOT NULL,
-    CONSTRAINT "pk_Salery" PRIMARY KEY (
+    CONSTRAINT "pk_Salary" PRIMARY KEY (
         "salary_id"
      )
 );
@@ -68,7 +68,7 @@ CREATE TABLE "Dept_Emp" (
 ALTER TABLE "Title" ADD CONSTRAINT "fk_Title_emp_no" FOREIGN KEY("emp_no")
 REFERENCES "Employee" ("emp_no");
 
-ALTER TABLE "Salery" ADD CONSTRAINT "fk_Salery_emp_no" FOREIGN KEY("emp_no")
+ALTER TABLE "Salary" ADD CONSTRAINT "fk_Salary_emp_no" FOREIGN KEY("emp_no")
 REFERENCES "Employee" ("emp_no");
 
 ALTER TABLE "Dept_Manager" ADD CONSTRAINT "fk_Dept_Manager_dept_no" FOREIGN KEY("dept_no")
