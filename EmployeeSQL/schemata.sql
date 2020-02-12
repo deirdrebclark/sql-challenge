@@ -38,7 +38,7 @@ CREATE TABLE "Salary" (
 );
 
 CREATE TABLE "Dept_Manager" (
-    "dept_no" integer   NOT NULL,
+    "dept_no" varchar(10)   NOT NULL,
     "emp_no" integer   NOT NULL,
     "from_date" date   NOT NULL,
     "to_date" date   NOT NULL,
@@ -48,7 +48,7 @@ CREATE TABLE "Dept_Manager" (
 );
 
 CREATE TABLE "Department" (
-    "dept_no" integer   NOT NULL,
+    "dept_no" varchar(10)   NOT NULL,
     "dept_name" varchar(150)   NOT NULL,
     CONSTRAINT "pk_Department" PRIMARY KEY (
         "dept_no"
@@ -57,7 +57,7 @@ CREATE TABLE "Department" (
 
 CREATE TABLE "Dept_Emp" (
     "emp_no" integer   NOT NULL,
-    "dept_no" integer   NOT NULL,
+    "dept_no" varchar(10)   NOT NULL,
     "from_date" date   NOT NULL,
     "to_date" date   NOT NULL,
     CONSTRAINT "pk_Dept_Emp" PRIMARY KEY (
